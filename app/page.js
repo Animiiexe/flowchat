@@ -1,101 +1,134 @@
 import Image from "next/image";
 
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="bg-gray-900 text-white min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="container mx-auto px-6 lg:px-20 py-20 flex flex-col lg:flex-row items-center justify-between">
+          {/* Hero Text */}
+          <div className="lg:w-1/2 space-y-6">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              Welcome to <span className="text-yellow-400">FlowChat</span>
+            </h1>
+            <p className="text-lg lg:text-xl text-gray-200">
+              Connect, collaborate, and chat effortlessly with a platform built for seamless communication. 
+              Experience the flow of meaningful conversations!
+            </p>
+            <div className="space-x-4">
+              <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-md shadow-md">
+                Get Started
+              </button>
+              <button className="bg-white hover:bg-gray-200 text-gray-900 font-bold py-3 px-6 rounded-md shadow-md">
+                Learn More
+              </button>
+            </div>
+          </div>
+          {/* Hero Image */}
+          <div className="lg:w-1/2 mt-12 lg:mt-0">
+            <img
+              src="/hero-chat.png"
+              alt="FlowChat Hero"
+              className="w-full max-w-lg mx-auto"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* Decorative Background */}
+        <div className="absolute inset-0 opacity-20 bg-pattern"></div>
+      </section>
+
+      {/* Features Section */}
+      <section className="container mx-auto px-6 lg:px-20 py-20 space-y-12">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center">
+          Why Choose FlowChat?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-blue-600 p-4 rounded-full mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 16h-1v-4H9m4 0h1m-1 4v2m-6 4h6a2 2 0 002-2v-1m4-4V9a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2h1l2 2 3-2h3"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold">Real-Time Messaging</h3>
+            <p className="text-gray-400 mt-2">
+              Chat in real-time with blazing-fast message delivery and read receipts.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-purple-600 p-4 rounded-full mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 10l4.553-2.276A2 2 0 0122 9.618v4.764a2 2 0 01-1.447 1.894L15 16m-6 0l-4.553 2.276A2 2 0 012 14.382V9.618a2 2 0 011.447-1.894L9 8m6 8V8m-6 8v-4m0-4V4"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold">Multimedia Sharing</h3>
+            <p className="text-gray-400 mt-2">
+              Share photos, videos, and files with ease in just a few clicks.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-yellow-400 p-4 rounded-full mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M20 13V6a2 2 0 00-2-2h-4M4 13v7a2 2 0 002 2h4m-6-4h16m-3-4a4 4 0 01-8 0m8 0a4 4 0 01-8 0"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold">Secure and Private</h3>
+            <p className="text-gray-400 mt-2">
+              End-to-end encryption to keep your conversations safe and private.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="bg-gray-800 py-12">
+        <div className="container mx-auto text-center">
+          <h2 className="text-2xl lg:text-3xl font-bold">
+            Ready to start chatting?
+          </h2>
+          <p className="text-gray-400 mt-4">
+            Join thousands of users making their conversations seamless with FlowChat.
+          </p>
+          <button className="mt-6 bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-md shadow-md">
+            Sign Up Now
+          </button>
+        </div>
+      </section>
     </div>
   );
 }
