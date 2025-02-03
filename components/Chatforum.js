@@ -17,10 +17,12 @@ import "stream-chat-react/dist/css/v2/index.css";
 
 import { useUser } from "@clerk/nextjs";
 
-const apiKey = "a4rb5pwmxgcx";
 
-const userToken =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNlcl8yczFqM09EcUlEOHRzZFU4S2FHaE5IZ2lRcXkifQ.v93YibrbVdJrOBabbRkTUQKW0xyhexjOsPR6gdEOTpE";
+
+
+const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
+const userToken = process.env.STREAM_USER_TOKEN;
+
 
 export default function Chatforum({ slug }) {
   const [user, setuser] = useState();
